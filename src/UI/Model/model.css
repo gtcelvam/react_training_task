@@ -1,0 +1,91 @@
+:root{
+    --border-bg: #D0D0D0;
+}
+h1{
+    color:black;
+}
+.backdrop{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(65, 59, 59, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.model-container{
+    width: 400px;
+    background-color: white;
+    padding: 1%;
+}
+.model-head-container h1{
+    font-size: 1.5rem;
+    color: gray;
+    margin: 0;
+}
+.model-close-container{
+    font-weight: 500;
+    font-size: 1.2vw;
+    cursor: pointer;
+    color: grey;
+}
+.model-head-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid var(--border-bg);
+}
+.model-head-container,.model-body-container{
+    padding: 2% 0;
+}
+.form-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1% 0;
+}
+.form-item-container input,
+.form-item-container textarea,
+.form-item-container select{
+    width: 100%;
+    border: 1px solid var(--border-bg);
+    outline: none;
+    padding: 0 1%;
+}
+.form-item-container label{
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+.role-status-container,.password-container{
+    display: flex;
+    align-items: center;
+}
+.role-container,.status-container,.p-container,.cp-container{
+    flex: 1;
+}
+.role-container,.p-container{
+    margin-right: 1%;
+}
+.status-container,.cp-container{
+    margin-left: 1%;
+}
+
+.model-footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2% 1%;
+    border-top: 1px solid var(--border-bg);
+}
+.model-footer-container button{
+    font-size: 12px;
+}
+.cancel-btn{
+    border:1px solid grey;
+    color:grey;
+    margin-right:5px;
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import Header from './components/header/header';
+import Login from './components/login/login';
+import Home from './components/home/home';
+import UserDetail from './UI/userDetail/userDetail';
+import {useSelector} from 'react-redux';
+import {Routes,Route,Navigate,useNavigate} from 'react-router-dom';
 import './App.css';
 
 function App() {
+  const user = useSelector(state=>state.user.isLoggedIn);
+  const navigate = useNavigate('/')
+  /* useEffect(()=>{
+    user ? navigate('/home/users') : navigate('/');
+  },[]) */
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Login/>}/>
+        <Route path='/home/users' element={!user ? <Navigate to='/'/> : <Home/>}/>
+        <Route path='/model' element={<UserDetail/>}/>
+      </Routes>
     </div>
   );
 }

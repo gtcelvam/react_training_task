@@ -1,0 +1,52 @@
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar-head{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head-container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar h1{
+    margin:0 10px;
+    padding:0;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-align: left;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+.menu-container{
+    display: flex;
+    align-items: center;
+}
+.menu-container p{
+    margin: 0 5px;
+    padding: 0;
+    font-size: 0.8vw;
+    color: grey;
+}
+.menu-container p.active{
+    color: white;
+}
+.nav-right h1{
+    font-size: 0.8vw;
+    color: grey;
+}
+.nav-left p:hover,.nav-right h1:hover{
+    color: white;
+    cursor: pointer;
+}
