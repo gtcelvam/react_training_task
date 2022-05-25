@@ -15,6 +15,9 @@ function UserDetail() {
   const details = {
       title : 'Edit User'
   }
+  const handleData = (e)=>{
+    console.log(e.target.value);
+  }
   return (
     <div className='user-detail-container'>
         <div className="user-detail-head"><p>User</p></div>
@@ -37,7 +40,7 @@ function UserDetail() {
         <div className="user-detail-foot">
             <button className='btn edit-btn' onClick={modelOpen}>Edit</button>
         </div>
-        {model && <Model modelClose={modelClose} details={details}/>}
+        {model && <Model modelClose={modelClose} details={details} handleData={handleData}/>}
     </div>
   )
 }

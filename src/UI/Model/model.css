@@ -89,3 +89,10 @@ h1{
     color:grey;
     margin-right:5px;
 }
+
+/* input validation */
+.input-alert{
+    margin: 0;
+    font-size: 8px;
+    color: red;
+}
